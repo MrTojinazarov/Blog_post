@@ -26,6 +26,12 @@ class CategoryController extends Controller
 
         return view('admin.category', ['categories' => $all, 'current_page' => $page,'total_pages' => $totalPages]);
 
+        // return response()->json([
+        //     'categories' => $all,
+        //     'current_page' => $page,
+        //     'total_pages' => $totalPages,
+        // ]);
+        
     }
 
     public function store(CategoryRequest $request)

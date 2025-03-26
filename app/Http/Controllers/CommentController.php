@@ -13,7 +13,7 @@ class CommentController extends Controller
             'message' => 'required',
         ]);
 
-        $comment = Comment::create([
+        Comment::create([
             'post_id' => $postId,
             'user_id' => Auth::id(),
             'body' => $request->input('message'),

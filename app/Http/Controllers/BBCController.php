@@ -37,6 +37,13 @@ class BBCController extends Controller
             ->get();
     
         return view('bbc.index', compact('posts', 'categories', 'new_posts'));
+
+        // return response()->json([
+        //     'posts' => $posts,
+        //     'categories' => $categories,
+        //     'new_posts' => $new_posts
+        // ]);
+        
     }
     
     
@@ -66,6 +73,13 @@ class BBCController extends Controller
             'categories' => $categories,
             'new_posts' => $new_posts,
         ]);
+
+        // return response()->json([
+        //     'posts' => $posts,
+        //     'categories' => $categories,
+        //     'new_posts' => $new_posts,
+        // ]);
+        
     }
     
     public function single($id)
@@ -100,6 +114,17 @@ class BBCController extends Controller
             'views_count' => $post->views,
             'comments' => $comments,
         ]);
+
+        // return response()->json([
+        //     'post' => $post,
+        //     'categories' => $categories,
+        //     'new_posts' => $new_posts,
+        //     'likes_count' => $post->likes_count,
+        //     'dislikes_count' => $post->dislikes_count,
+        //     'views_count' => $post->views,
+        //     'comments' => $comments,
+        // ]);
+        
     }
     
 }

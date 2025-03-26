@@ -38,6 +38,14 @@ class AdminController extends Controller
             $posts = $user->posts;
 
             return view('admin.index', compact('totalPosts', 'totalLikes', 'totalDislikes', 'totalViews', 'posts'));
+            // return response()->json([
+            //     'totalPosts' => $totalPosts,
+            //     'totalLikes' => $totalLikes,
+            //     'totalDislikes' => $totalDislikes,
+            //     'totalViews' => $totalViews,
+            //     'posts' => $posts
+            // ]);
+            
         }
     }    
 

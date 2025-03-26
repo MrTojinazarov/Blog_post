@@ -50,6 +50,14 @@ class PostController extends Controller
             'current_page' => $page,
             'total_pages' => $totalPages
         ]);
+
+        // return response()->json([
+        //     'posts' => $posts,
+        //     'categories' => $categories,
+        //     'current_page' => $page,
+        //     'total_pages' => $totalPages,
+        // ]);
+        
     }
 
 
