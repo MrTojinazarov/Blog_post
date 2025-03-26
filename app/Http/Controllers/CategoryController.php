@@ -11,7 +11,7 @@ class CategoryController extends Controller
     public function index(Request $request)
     {
         $page = $request->input('page', 1);
-        $perPage = 2;
+        $perPage = 5;
 
         $offset = ($page - 1) * $perPage;
         

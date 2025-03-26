@@ -20,10 +20,10 @@ class StatisticsExport implements FromCollection
         
         if ($this->user->hasRole('admin')) {
             $authors = User::whereHas('roles', function ($query) {
-                $query->where('name', 'author');
+                $query->where('name', 'author'); //Agar author role ga ega user hali yo'q bo'lsa admin deb nomlab tekshirib ko'rish kerak
             })->get();
             $data->push([
-                'Author' => 'Author',
+                'Author' => 'Name',
                 'Postlar soni' => 'Postlar soni',
                 'Like' => 'Likes',
                 'Dislike' => 'Dislike',
